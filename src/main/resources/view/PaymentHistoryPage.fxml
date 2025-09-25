@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1050.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.PaymentController">
+    <children>
+        <VBox layoutX="50.0" layoutY="30.0" prefHeight="590.0" prefWidth="950.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="950.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10 10 0 0;">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="500.0" text="💳 Payment History" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="450.0" spacing="15.0">
+                            <children>
+                                <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackOnAction" style="-fx-background-color: #bdc3c7; -fx-text-fill: #2c3e50; -fx-background-radius: 5; -fx-font-size: 14px;" text="⬅️ Back">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </HBox>
+
+                <VBox prefHeight="480.0" prefWidth="910.0">
+                    <children>
+                        <Label text="Payment Transactions:">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tblPaymentHistory" prefHeight="440.0" prefWidth="910.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 1; -fx-background-radius: 5;">
+                            <columns>
+                                <TableColumn fx:id="colPayID" prefWidth="100.0" text="Payment ID" />
+                                <TableColumn fx:id="colStudent_courseID" prefWidth="250.0" text="Enrollment / Course ID" />
+                                <TableColumn fx:id="colDate" prefWidth="250.0" text="Date" />
+                                <TableColumn fx:id="colFee" prefWidth="310.0" text="Course Fee Paid (Rs.)" />
+                            </columns>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

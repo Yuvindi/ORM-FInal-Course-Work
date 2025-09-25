@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.StudentController">
+    <children>
+        <VBox layoutX="50.0" layoutY="30.0" prefHeight="640.0" prefWidth="1000.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10 10 0 0;">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="400.0" text="🧑‍🎓 Student Management" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="600.0" spacing="15.0">
+                            <children>
+                                <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackOnAction" style="-fx-background-color: #bdc3c7; -fx-text-fill: #2c3e50; -fx-background-radius: 5; -fx-font-size: 14px;" text="⬅️ Back">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </HBox>
+
+                <HBox alignment="TOP_LEFT" prefHeight="250.0" prefWidth="960.0" spacing="40.0">
+                    <VBox prefHeight="250.0" prefWidth="650.0" spacing="15.0">
+                        <children>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="User ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbUser" onAction="#cmbUserOnAction" prefHeight="35.0" prefWidth="150.0" promptText="Select User ID" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                    <Label prefWidth="100.0" text="Student ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentID" prefHeight="35.0" prefWidth="150.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50">
+                                        <font>
+                                            <Font name="System Bold" size="16.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Name:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtName" onKeyTyped="#Name" prefHeight="35.0" prefWidth="300.0" promptText="Enter Your Name" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Contact Number:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtPhoneNumber" onKeyTyped="#Phone" prefHeight="35.0" prefWidth="300.0" promptText="Enter Your Contact Number" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Email:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtEmail" onKeyTyped="#Email" prefHeight="35.0" prefWidth="300.0" promptText="Enter Your Email" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Address:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtAddress" onKeyTyped="#Address" prefHeight="35.0" prefWidth="300.0" promptText="Enter Your Address" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="250.0" prefWidth="250.0" spacing="15.0">
+                        <children>
+                            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="➕ Add Student">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="✏️ Update Student">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="🗑️ Delete Student">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 5;" text="🧹 Clear Fields">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                        </children>
+                        <HBox.margin>
+                            <Insets top="10.0" />
+                        </HBox.margin>
+                    </VBox>
+                </HBox>
+
+                <VBox prefHeight="240.0" prefWidth="960.0">
+                    <children>
+                        <Label text="Registered Students:">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tblStudents" prefHeight="207.0" prefWidth="960.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 1; -fx-background-radius: 5;">
+                            <columns>
+                                <TableColumn fx:id="colStudentID" prefWidth="80.0" text="ID" />
+                                <TableColumn fx:id="colName" prefWidth="180.0" text="Name" />
+                                <TableColumn fx:id="colPhoneNumber" prefWidth="170.0" text="Contact Number" />
+                                <TableColumn fx:id="colEmail" prefWidth="250.0" text="Email" />
+                                <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
+                                <TableColumn fx:id="colUserID" prefWidth="80.0" text="UserID" />
+                            </columns>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.StudentRegisterController">
+    <children>
+        <VBox layoutX="50.0" layoutY="30.0" prefHeight="690.0" prefWidth="1000.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10 10 0 0;">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="500.0" text="🧑‍🎓 Student Enrollment &amp; Course Registration" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="500.0" spacing="15.0">
+                            <children>
+                                <Button fx:id="btnBack" mnemonicParsing="false" onAction="#btnBackOnAction" style="-fx-background-color: #bdc3c7; -fx-text-fill: #2c3e50; -fx-background-radius: 5; -fx-font-size: 14px;" text="⬅️ Back">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </HBox>
+
+                <HBox alignment="TOP_LEFT" prefHeight="350.0" prefWidth="960.0" spacing="40.0">
+                    <VBox prefHeight="350.0" prefWidth="750.0" spacing="15.0">
+                        <children>
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Select Student (Phone):">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbStudentPhoneNumber" onAction="#cmbStudentOnAction" prefHeight="35.0" prefWidth="245.0" promptText="Select Student Contact" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+
+                                    <Label prefWidth="150.0" text="Select Course (Name):">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <ComboBox fx:id="cmbCourseName" onAction="#cmbCourseOnAction" prefHeight="35.0" prefWidth="245.0" promptText="Select Course Name" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Student ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentID" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+
+                                    <Label prefWidth="150.0" text="Course ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblCourseID" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+                                </children>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Student Name:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentName1" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+
+                                    <Label prefWidth="150.0" text="Course Fee (Rs.):">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblFee1" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+                                </children>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Payment ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblPaymentId1" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+
+                                    <Label prefWidth="150.0" text="Duration:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblDuration" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+                                </children>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Enrollment Date:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblDate1" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+
+                                    <Label prefWidth="150.0" text="Student Course ID:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="lblStudentCourseId1" prefHeight="35.0" prefWidth="245.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-padding: 5; -fx-background-color: #ecf0f1;" textFill="#2c3e50" />
+                                </children>
+                            </HBox>
+
+                            <HBox alignment="CENTER_LEFT" spacing="50.0">
+                                <children>
+                                    <Label prefWidth="150.0" text="Course Batch No.:">
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="txtBatchNumber" prefHeight="35.0" prefWidth="245.0" promptText="Enter Batch Number (e.g., A001)" style="-fx-border-color: #bdc3c7; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-size: 16px;" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+
+                    <VBox prefHeight="250.0" prefWidth="250.0" spacing="15.0">
+                        <children>
+                            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="➕ Add Registration">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="✏️ Update Registration">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="🗑️ Delete Registration">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 5;" text="🧹 Clear Fields">
+                                <font>
+                                    <Font name="System Bold" size="14.0" />
+                                </font>
+                            </Button>
+                        </children>
+                        <HBox.margin>
+                            <Insets top="10.0" />
+                        </HBox.margin>
+                    </VBox>
+                </HBox>
+
+                <VBox prefHeight="240.0" prefWidth="960.0">
+                    <children>
+                        <Label text="Current Enrollments:">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TableView fx:id="tblStudentCourse" prefHeight="180.0" prefWidth="960.0" style="-fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-width: 1; -fx-background-radius: 5;">
+                            <columns>
+                                <TableColumn fx:id="colStudentId" prefWidth="150.0" text="Student ID" />
+                                <TableColumn fx:id="colCourseId" prefWidth="150.0" text="Course ID" />
+                                <TableColumn fx:id="colBatchNumber" prefWidth="200.0" text="Batch Number" />
+                                <TableColumn fx:id="colStudentCourseId" prefWidth="250.0" text="Enrollment ID" />
+                                <TableColumn fx:id="colDate" prefWidth="180.0" text="Date" />
+                            </columns>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
