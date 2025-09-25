@@ -91,7 +91,7 @@ public class UserController {
         setCellValueFactory();
         loadAll();
         generateNextUserId();
-        lastLoginID();
+//        lastLoginID();
 
 
         tblUsers.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
