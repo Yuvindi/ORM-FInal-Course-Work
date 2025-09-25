@@ -38,13 +38,13 @@ public class DashBoardController {
 
     LoginDAO loginDAO = (LoginDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DaoType.Login);
     public void initialize() throws SQLException, ClassNotFoundException {
-        lastLoginID();
+//        lastLoginID();
     }
 
     private void lastLoginID() {
         Login login = loginDAO.getLastLogin();
         System.out.println(login.getUserID());
-        LblUserID.setText(login.getUserID());
+//        LblUserID.setText(login.getUserID());
     }
 
 
