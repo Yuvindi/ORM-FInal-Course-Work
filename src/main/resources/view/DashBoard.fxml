@@ -1,175 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.DashBoardController">
-    <VBox prefHeight="616.0" prefWidth="150.0" style="-fx-background-color: #006A67;">
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #f0f2f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.DashBoardController">
+
+    <VBox prefWidth="180.0" spacing="10.0" style="-fx-background-color: #2c3e50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets top="20.0" />
+        </padding>
         <children>
-            <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text=" Dashboard" textFill="WHITE">
+            <Button fx:id="btnDashboard" graphicTextGap="10" onAction="#btnDashboardOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Dashboard">
                 <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <ImageView fitHeight="25" fitWidth="25" pickOnBounds="true" preserveRatio="true">
                         <image>
                             <Image url="@../images/dashboard_icon.png" />
                         </image>
                     </ImageView>
                 </graphic>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
             </Button>
-            <Label prefHeight="31.0" prefWidth="81.0" />
-            <Button fx:id="btnStudentRegister" onAction="#btnStudentRegisterOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="  StudyLog" textFill="WHITE">
+         <Button fx:id="btnStudentRegister" alignment="CENTER_LEFT" onAction="#btnStudentRegisterOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Study">
+            <padding>
+               <Insets left="20.0" />
+            </padding>
+            <font>
+               <Font size="19.0" />
+            </font>
+         </Button>
+
+            <Button fx:id="btnCourse" alignment="CENTER_LEFT" onAction="#btnCourseOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Course">
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="btnStudent" alignment="CENTER_LEFT" onAction="#btnStudentOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Student">
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="btnPayment" alignment="CENTER_LEFT" onAction="#btnPaymentOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Payment">
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="btnInstructor" alignment="CENTER_LEFT" onAction="#btnInstructorOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Instructor">
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="btnSchedule" alignment="CENTER_LEFT" onAction="#btnScheduleOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Schedule">
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
+            </Button>
+
+            <Button fx:id="btnUsers" alignment="CENTER_LEFT" onAction="#btnUsersOnAction" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18px;" text="Users">
                 <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <ImageView fitHeight="25" fitWidth="25">
                         <image>
-                            <Image url="@../images/studylog_icon.png" />
+                            <Image url="@../images/user_icon.png" />
                         </image>
                     </ImageView>
                 </graphic>
+                <padding>
+                    <Insets left="20.0" />
+                </padding>
             </Button>
-            <Button fx:id="btnCourse" onAction="#btnCourseOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="  Course" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/courses.png" />
-                        </image>
-                    </ImageView>
-                </graphic></Button>
-            <Button fx:id="btnStudent" onAction="#btnStudentOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="  Student" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/student_icon.png" />
-                        </image>
-                    </ImageView>
-                </graphic></Button>
-            <Button fx:id="btnPayment" onAction="#btnPaymentOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="  Payment" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/payment_icon.png" />
-                        </image>
-                    </ImageView>
-                </graphic></Button>
-
-            <Button fx:id="btnUsers" onAction="#btnUsersOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="  Users" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/user_icon.png" />
-                        </image>
-                    </ImageView>
-                </graphic></Button>
-            <Button fx:id="btnInstructor" onAction="#btnInstructorOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="Instructor" textFill="WHITE">
-                <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/user_icon.png" />
-                        </image>
-                    </ImageView>
-                </graphic></Button>
-         <Button fx:id="btnSchedule" layoutX="10.0" layoutY="461.0" onAction="#btnScheduleOnAction" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #006A67;" text="Schedule" textFill="WHITE">
-            <graphic>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../images/studylog_icon.png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Button>
         </children>
     </VBox>
-    <AnchorPane fx:id="subAnchorPane" layoutX="179.0" layoutY="56.0" prefHeight="550.0" prefWidth="1000.0">
+
+    <VBox layoutX="210.0" layoutY="30.0" prefHeight="575.0" prefWidth="960.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5);">
         <children>
-            <AnchorPane layoutX="344.0" layoutY="238.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF9C73; -fx-background-radius: 30px;">
+
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="960.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10 10 0 0;">
                 <children>
-                    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/student_count_icon.png" />
-                        </image>
-                    </ImageView>
-                    <Label layoutX="159.0" layoutY="9.0" prefHeight="45.0" prefWidth="150.0" text="ENROLLMENT" textFill="WHITE">
+                    <Text fill="WHITE" layoutX="20.0" layoutY="45.0" text="ELITE DRIVING SCHOOL DASHBOARD">
                         <font>
-                            <Font name="Garuda Bold" size="24.0" />
+                            <Font name="System Bold" size="24.0" />
                         </font>
-                    </Label>
-                    <Label fx:id="student_count" layoutX="185.0" layoutY="30.0" prefHeight="75.0" prefWidth="150.0" text="10" textFill="WHITE">
-                        <font>
-                            <Font name="Jamrul" size="48.0" />
-                        </font>
-                    </Label>
+                        <HBox.margin>
+                            <Insets left="20.0" />
+                        </HBox.margin>
+                    </Text>
+               <Label fx:id="LblLogin"  opacity="0.0" prefHeight="43.0" prefWidth="228.0" text="Label" />
                 </children>
-            </AnchorPane>
-            <AnchorPane layoutX="350.0" layoutY="109.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #9B86BD; -fx-background-radius: 30px;">
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="30.0">
                 <children>
-                    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/courses_count_icon.png" />
-                        </image>
-                    </ImageView>
-                    <Label layoutX="103.0" layoutY="9.0" prefHeight="45.0" prefWidth="219.0" text="COURSE SUMMERY" textFill="WHITE">
-                        <font>
-                            <Font name="Garuda Bold" size="24.0" />
-                        </font>
-                    </Label>
-                    <Label fx:id="course_count" layoutX="186.0" layoutY="29.0" prefHeight="75.0" prefWidth="100.0" text="5" textFill="WHITE">
-                        <font>
-                            <Font name="Jamrul" size="48.0" />
-                        </font>
-                    </Label>
+                    <AnchorPane prefHeight="120.0" prefWidth="280.0" style="-fx-background-color: #82b1ff; -fx-background-radius: 10;">
+                        <children>
+                            <Label layoutX="28.0" layoutY="14.0" text="ENROLLMENT" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label fx:id="student_count" layoutX="110.0" layoutY="39.0" text="10" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="36" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+
+                    <AnchorPane prefHeight="120.0" prefWidth="280.0" style="-fx-background-color: #448aff; -fx-background-radius: 10;">
+                        <children>
+                            <Label layoutX="25.0" layoutY="14.0" text="COURSES" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label fx:id="course_count" layoutX="130.0" layoutY="39.0" text="5" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="36" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
+
+                    <AnchorPane prefHeight="120.0" prefWidth="280.0" style="-fx-background-color: #2979ff; -fx-background-radius: 10;">
+                        <children>
+                            <Label layoutX="26.0" layoutY="14.0" text="ADMINS" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="18" />
+                                </font>
+                            </Label>
+                            <Label fx:id="admin_count" layoutX="130.0" layoutY="34.0" text="2" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="36" />
+                                </font>
+                            </Label>
+                        </children>
+                    </AnchorPane>
                 </children>
-            </AnchorPane>
-            <Label layoutX="315.0" layoutY="21.0" prefHeight="80.0" prefWidth="458.0" text="The Elite Driving School" underline="true">
-                <font>
-                    <Font name="Lohit Odia" size="36.0" />
-                </font>
-            </Label>
-            <Label layoutX="319.0" layoutY="22.0" opacity="0.43" prefHeight="80.0" prefWidth="458.0" text="The Elite Driving School" underline="true">
-                <font>
-                    <Font name="Lohit Odia" size="36.0" />
-                </font>
-            </Label>
-            <AnchorPane layoutX="351.0" layoutY="377.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #387478; -fx-background-radius: 30px;">
-                <children>
-                    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/admin_count.png" />
-                        </image>
-                    </ImageView>
-                    <Label layoutX="103.0" layoutY="9.0" prefHeight="45.0" prefWidth="219.0" text="ADMIN COUNT" textFill="WHITE">
-                        <font>
-                            <Font name="Garuda Bold" size="24.0" />
-                        </font>
-                    </Label>
-                    <Label fx:id="admin_count" layoutX="185.0" layoutY="28.0" prefHeight="75.0" prefWidth="100.0" text="2" textFill="WHITE">
-                        <font>
-                            <Font name="Jamrul" size="48.0" />
-                        </font>
-                    </Label>
-                </children>
-            </AnchorPane>
+                <padding>
+                    <Insets left="20.0" right="20.0" />
+                </padding>
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin>
+            </HBox>
+
+            <AnchorPane prefHeight="300.0" prefWidth="960.0" />
+
         </children>
-    </AnchorPane>
-    <Label fx:id="LblUserID" layoutX="1080.0" layoutY="8.0" prefHeight="36.0" prefWidth="99.0" text="U001">
-        <font>
-            <Font name="Garuda Bold" size="18.0" />
-        </font>
-    </Label>
-    <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="1029.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../images/user_black_icon.png" />
-        </image>
-    </ImageView>
-   <Button fx:id="btnLogout" layoutX="181.0" layoutY="12.0" onAction="#btnLogoutOnAction" prefHeight="58.0" prefWidth="142.0" style="-fx-background-color: #006A67;" text="  Logout" textFill="WHITE">
-      <graphic>
-         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../images/logout_icon.png" />
-            </image>
-         </ImageView>
-      </graphic>
-   </Button>
+        <padding>
+            <Insets bottom="10.0" left="0.0" right="0.0" top="0.0" />
+        </padding>
+    </VBox>
+   <Button layoutX="1064.0" layoutY="629.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="106.0" style="-fx-background-color: #ff3d00; -fx-border-radius: 5;" text="LOGOUT" />
 </AnchorPane>
