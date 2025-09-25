@@ -6,8 +6,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -19,7 +17,7 @@
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0" style="-fx-background-color: #2c3e50; -fx-background-radius: 10 10 0 0;">
                     <children>
-                        <Label prefHeight="40.0" prefWidth="300.0" text="🎓 Course Management" textFill="WHITE">
+                        <Label prefHeight="40.0" prefWidth="395.0" text="🎓 Course Management" textFill="WHITE">
                             <font>
                                 <Font name="System Bold" size="24.0" />
                             </font>
